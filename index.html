@@ -83,7 +83,7 @@ function nextPage() {
     if (nextPageNum > maxPages) nextPageNum = 1;
 
     flipPage.style.backgroundImage = `url('page${page}.png')`;
-    flipBack.style.backgroundImage = `url('page${nextPageNum}.png')`;
+    flipBack.style.backgroundImage = `url('page${prevPageNum}.png')`;
 
     flipPage.classList.remove("reverse");
     flipPage.style.transform = "rotateY(-180deg)";
@@ -108,7 +108,7 @@ function prevPage() {
     if (prevPageNum < 1) prevPageNum = maxPages;
 
     flipPage.style.backgroundImage = `url('page${page}.png')`;
-    flipBack.style.backgroundImage = `url('page${prevPageNum}.png')`;
+    flipBack.style.backgroundImage = `url('page${nextPageNum}.png')`;
 
     flipPage.classList.add("reverse");
     flipPage.style.transform = "rotateY(180deg)";
